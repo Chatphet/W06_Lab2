@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function addData() {
+            let one = document.getElementById("num1")
+            let Number1 = one.value;
+            let two = document.getElementById("num2")
+            let Number2 = two.value;
+            let O = document.getElementById("Option")
+            let Op = O.value;
+            if (Op == "+"){
+                ans = parseInt(Number1) + parseInt(Number2);
+            }
+            else if (Op == "-"){
+                ans = parseInt(Number1) - parseInt(Number2);
+            }
+            else if (Op == "*"){
+                ans = parseInt(Number1) * parseInt(Number2);
+            }
+            else if (Op == "/"){
+                ans = parseInt(Number1) / parseInt(Number2);
+            }
+            sum.value = ans;
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+
+        <input type="text" id="num1">
+
+        <select id = Option>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+
+        <input type="text" id="num2">
+        =
+        <input type="text" id="sum" readonly="readonly">
+        <input type="button" id="addButton" value="Go Go" onclick="addData()">
+    </form>
+
+</body>
+
+</html>
